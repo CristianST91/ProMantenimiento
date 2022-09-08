@@ -1,0 +1,150 @@
+<!--HTML-->
+
+<!DOCTYPE html>
+<html lang="en">
+<!--Cabecera del documento-->
+
+<head>
+    <meta charset="UTF-16">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance +</title>
+    <!--Estilo tipografico Carter One-->
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/carter-one');
+    </style>
+    <!--Cargar hojas de estilos-->
+    <link rel="stylesheet" href="index.css" />
+    <!--Caragar bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+
+</head>
+<!--Cuerpo del documento-->
+
+<body class="marginbody">
+    <!--Encabezado de la página-->
+    <main>
+    <!--logo y titulo-->
+    <section id="section-logo">
+        <img src="Logo.PNG" alt="30px" width="30px" height="30px" />
+        <div>
+            <h5 class="centro">
+                &emsp;Maintenance +
+            </h5>
+        </div>
+        <!--Boton de LogOut-->
+        <div class="lado">
+            <a href="LogIn.html">
+                <button type="button" class="btn btn-dark">LogOut</button>
+            </a>
+        </div>
+    </section>
+    <!--Formulario-->
+    <!--Area de: date, Work Order Number y Estimated Time-->
+    <section id="section-menu2">
+        <!--<form-control-date> Date-->
+        <div class="centro">
+            <label for="datepick">Date&ensp;</label>
+            <div class="md-form md-outline input-with-post-icon datepicker">
+                <input placeholder="Select date" type="date" id="datepick" class="form-control">
+            </div>
+        </div>
+        <div>&emsp;&emsp;&emsp;</div>
+         <!--<form-control-text> Work Order Number-->
+        <div class="centro">
+            <label for="WON">Work Order Number&ensp;&ensp;</label>
+            <input class="form-control input-lm" type="text" id="WON" placeholder="N°">
+        </div>
+        <div>&emsp;&emsp;&emsp;</div>
+        <!--<form-control-number> Estimated Time-->
+        <div class="centro">
+            <label for="EstimatedTime">Estimated Time&ensp;&ensp;</label>
+            <input type="number" id="EstimatedTime" class="form-control" placeholder="Hours" />
+        </div>
+        <br><br>
+    </section>
+    <!--Area de: Responsible, Activity y Suggestions-->
+    <form id="section-menu3">
+        <!--<form-select> Responsible-->
+        <div class="centro">
+            <label for="menulist">Responsible&ensp;</label>
+            <select class="form-select" id="menulist" required>
+                <option selected disabled value="">Developer Name&ensp;</option>
+                <option>...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid state.
+            </div>
+        </div>
+        <br>
+        <!--<form-control-text> Activity-->
+        <div class="centro">
+            <label for="activ">Activity&ensp;</label>
+            <input class="form-control input-lm" type="text" id="activ" placeholder="Activity Name">
+        </div>
+        <br><br>
+        <!--<text-area> Suggestions:-->
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Suggestions:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tips for the activity developer"></textarea>
+        </div>
+    </form>
+    <!--Area de: Real Time, Activity Finished!-->
+    <section id="section-menu4">
+        <!--<form-control-number> Real Time-->
+        <div element class="centro">
+            <label for="EstimatedTime">Real Time&ensp;</label>
+            <input type="number" id="EstimatedTime" class="form-control" placeholder="Hours" />
+        </div>
+        <!--<form-check-label> Activity Finished!-->
+        <div class="centro">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                title="Create a team and its account manager">
+            <label class="form-check-label" for="invalidCheck">&ensp;&ensp;Activity Finished!</label>
+        </div>
+    </section>
+    <!--Area de: Notes-->
+    <section id="section-menu3">
+        <br>
+        <!--<text-area> Notes:-->
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Notes:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notes, drawbacks"></textarea>
+        </div>
+    </section>
+    <!--Area de: Back, Save, Next-->
+    <section id="section-menu5">
+        <!--Boton de Back-->
+        <div class="centro">
+            <a href="Agenda.html">
+                <button type="button" class="btn btn-dark">Back</button>
+            </a>
+        </div>
+        <!--Boton de Save-->
+        <div class="centro">
+            <a href="Agenda.html">
+                <button type="button" class="btn btn-dark">Save</button>
+            </a>
+        </div>
+        <!--Boton de Next-->
+        <div class="centro">
+            <a href="Agenda.html">
+                <button type="button" class="btn btn-dark">Next</button>
+            </a>
+        </div>
+    </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
