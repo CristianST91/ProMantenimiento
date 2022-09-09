@@ -86,6 +86,12 @@ h1{
     padding-right: 15%;
 }
 
+.margindate {
+    box-sizing: 15%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
 .centro{
     margin: 0;
     padding: 0;
