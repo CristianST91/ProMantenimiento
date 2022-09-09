@@ -1,8 +1,17 @@
 /*#section-form{
     background-color: darkslategray;
 }*/
-
 #section-logo{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: Carter One;
+    font-weight: normal;
+}
+
+#section-logo2{
     margin-top: 25px;
     display: flex;
     justify-content: right;
