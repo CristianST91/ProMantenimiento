@@ -31,7 +31,7 @@
 </head>
 <!--Cuerpo del documento-->
 
-<body class="marginbody">
+<body class="margin-body">
     <!--Encabezado de la página-->
     <main>
     <!--logo y titulo-->
@@ -54,22 +54,22 @@
     <section id="section-menu2">
         <!--<form-control-date> Date-->
         <div class="centro">
-            <label for="datepick">Date&ensp;</label>
-            <div class="md-form md-outline input-with-post-icon datepicker">
-                <input placeholder="Select date" type="date" id="datepick" class="form-control">
+            <label for="date-pick">Date&ensp;</label>
+            <div class="d-flex p-2 bd-highlight">
+                <input placeholder="Select date" type="date" id="date-pick" class="label-time">
             </div>
         </div>
-        <div class="margindate"></div>
+        <div class="margin-date"></div>
          <!--<form-control-text> Work Order Number-->
         <div class="centro">
             <label for="WON">Work Order Number&ensp;&ensp;</label>
             <input class="form-control input-lm" type="text" id="WON" placeholder="N°">
         </div>
-        <div class="margindate"></div>
+        <div class="margin-date"></div>
         <!--<form-control-number> Estimated Time-->
         <div class="centro">
-            <label for="EstimatedTime">Estimated Time&ensp;&ensp;</label>
-            <input type="number" id="EstimatedTime" class="form-control" placeholder="Hours" />
+            <label for="Estimated-time">Estimated Time&ensp;&ensp;</label>
+            <input type="number" id="Estimated-time" class="form-control" placeholder="Hours" />
         </div>
         <br><br>
     </section>
@@ -77,8 +77,8 @@
     <form id="section-menu3">
         <!--<form-select> Responsible-->
         <div class="centro">
-            <label for="menulist">Responsible&ensp;</label>
-            <select class="form-select" id="menulist" required>
+            <label for="menu-list">Responsible&ensp;</label>
+            <select class="form-select" id="menu-list" required>
                 <option selected disabled value="">Developer Name&ensp;</option>
                 <option>...</option>
             </select>
@@ -95,22 +95,22 @@
         <br><br>
         <!--<text-area> Suggestions:-->
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Suggestions:</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tips for the activity developer"></textarea>
+            <label for="Suggestions-box">Suggestions:</label>
+            <textarea class="form-control" id="Suggestions-box" rows="3" placeholder="Tips for the activity developer"></textarea>
         </div>
     </form>
     <!--Area de: Real Time, Activity Finished!-->
     <section id="section-menu4">
         <!--<form-control-number> Real Time-->
         <div element class="centro">
-            <label for="EstimatedTime">Real Time&ensp;</label>
-            <input type="number" id="EstimatedTime" class="form-control" placeholder="Hours" />
+            <label for="Real-time">Real Time&ensp;</label>
+            <input type="number" id="Real-time" class="form-control" placeholder="Hours" />
         </div>
         <!--<form-check-label> Activity Finished!-->
         <div class="centro">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+            <input class="form-check-input" type="checkbox" value="" id="Check2"
                 title="Create a team and its account manager">
-            <label class="form-check-label" for="invalidCheck">&ensp;&ensp;Activity Finished!</label>
+            <label class="form-check-label" for="Check2">&ensp;&ensp;Activity Finished!</label>
         </div>
     </section>
     <!--Area de: Notes-->
@@ -118,11 +118,13 @@
         <br>
         <!--<text-area> Notes:-->
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Notes:</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notes, drawbacks"></textarea>
+            <label for="Notes-box">Notes:</label>
+            <textarea class="form-control" id="Notes-box" rows="3" placeholder="Notes, drawbacks"></textarea>
         </div>
     </section>
-    <!--Area de: Back, Save, Next-->
+    </main>
+    <footer>
+        <!--Area de: Back, Save, Next-->
     <section id="section-menu5">
         <!--Boton de Back-->
         <div class="centro">
@@ -143,8 +145,8 @@
             </a>
         </div>
     </section>
-    </main>
-    <footer></footer>
+    <div class="margin-end"></div>
+    </footer>
 </body>
 
 </html>
