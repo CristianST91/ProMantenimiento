@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "user_data")
-public class user_data {
+public class User_data {
     //ATRIBUTOS
     @Id
     private int id;
@@ -18,15 +18,29 @@ public class user_data {
     private boolean team_admin;    
 
     //CONSTRUCTORES
-    public user_data(){}
+    public User_data(){}
 
-    public user_data(String team, String _name, String last_name, String user_name, String pass_word, boolean team_admin) {  
+    public User_data(String team, String _name, String last_name, String user_name, String pass_word, boolean team_admin) {  
         this.team = team; 
         this._name = _name; 
         this.last_name = last_name;
         this.user_name = user_name; 
         this.pass_word = pass_word; 
         this.team_admin = team_admin;         
+    }
+
+    @Override
+    public String toString(){
+        String info = "------------------------------\n";
+        info += "Id: "+id;
+        info += "\nTeam: "+team;
+        info += "\nName: "+_name;
+        info += "\nLast name: "+last_name;
+        info += "\nUser name: "+user_name;
+        info += "\nPass word: "+pass_word;
+        info += "\nTeam admin: "+team_admin;
+        info += "\n------------------------------\n";
+        return info;
     }
 
      //CONSULTORES

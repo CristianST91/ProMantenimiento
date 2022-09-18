@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "admin_order")
-public class admin_order {
+public class Admin_order {
     //ATRIBUTOS
     @Id
     private int id;
@@ -20,9 +20,9 @@ public class admin_order {
     private String suggestions;
 
     //CONSTRUCTORES
-    private admin_order() {}
+    private Admin_order() {}
 
-    private admin_order(String team, long _date, String work_order_number, int estimated_time, String responsible, String activity, String suggestions) {    
+    private Admin_order(String team, long _date, String work_order_number, int estimated_time, String responsible, String activity, String suggestions) {    
         this.team= team;
         this._date= _date;
         this.work_order_number= work_order_number;
@@ -30,6 +30,21 @@ public class admin_order {
         this.responsible=responsible;
         this.activity= activity;
         this.suggestions= suggestions;
+    }
+
+    @Override
+    public String toString(){
+        String info = "------------------------------\n";
+        info += "Id: "+id;
+        info += "\nTeam: "+team;
+        info += "\nDate: "+_date;
+        info += "\nWorkOrderNumber: "+work_order_number;
+        info += "\nEstimatedTime: "+estimated_time;
+        info += "\nResponsible: "+responsible;
+        info += "\nActivity: "+activity;
+        info += "\nSuggestions: "+suggestions;
+        info += "\n------------------------------\n";
+        return info;
     }
 
      //CONSULTORES
@@ -95,3 +110,4 @@ public class admin_order {
     }
 
 }
+

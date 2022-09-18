@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "team_data")
-public class team_data {
+public class Team_data {
     //ATRIBUTOS
     @Id
     private int id;
@@ -14,11 +14,21 @@ public class team_data {
     private String user_admin;
 
     //CONSTRUCTORES
-    public team_data() {}
+    public Team_data() {}
 
-    public team_data(String team, String user_admin) {
+    public Team_data(String team, String user_admin) {
         this.team= team;
         this.user_admin= user_admin;
+    }
+
+    @Override
+    public String toString(){
+        String info = "------------------------------\n";
+        info += "Id: "+id;
+        info += "\nTeam: "+team;
+        info += "\nUser_admin: "+user_admin;
+        info += "\n------------------------------\n";
+        return info;
     }
 
     //CONSULTORES

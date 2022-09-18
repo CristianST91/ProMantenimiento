@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "user_order")
-public class user_order {
+public class User_order {
     //ATRIBUTOS
     @Id
     private int id;
@@ -16,13 +16,25 @@ public class user_order {
     private String notes;
 
     //CONSTRUCTORES
-    private user_order() {}
+    private User_order() {}
 
-    private user_order(String team, String real_time, boolean activity_finished, String notes) { 
+    private User_order(String team, String real_time, boolean activity_finished, String notes) { 
         this.team=team; 
         this.real_time=real_time; 
         this.activity_finished=activity_finished; 
         this.notes=notes; 
+    }
+
+    @Override
+    public String toString(){
+        String info = "------------------------------\n";
+        info += "Id: "+id;
+        info += "\nTeam: "+team;
+        info += "\nReal time: "+real_time;
+        info += "\nActivity finished: "+activity_finished;
+        info += "\nNotes: "+notes;
+        info += "\n------------------------------\n";
+        return info;
     }
 
      //CONSULTORES
