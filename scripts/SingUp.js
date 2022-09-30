@@ -25,8 +25,11 @@ if (adm.length == 0) {
 }else{ 
   alert('The team already has an administrator')
 }
-  clear(form)
 }
+if (user_.teamAdmin==false){
+  await create_user(user_)
+}
+clear(form)
 }
 
 
