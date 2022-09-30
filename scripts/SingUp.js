@@ -15,20 +15,20 @@ async function data_singup(evt) {
    
 }
 
-console.log("teamAdmin:");
-console.log(user_.teamAdmin);
-if (user_.teamAdmin==true){
-  const resp = await fetch(`http://localhost:8080/userdata/team/adm/${user_.team}`)
-  let adm = await resp.json()
-if (adm.length == 0) {
-  await create_user(user_)
-}else{ 
-  alert('The team already has an administrator')
-}
-}
 if (user_.teamAdmin==false){
   await create_user(user_)
 }
+
+if (user_.teamAdmin==true){
+  const resp = await fetch(`http://localhost:8080/userdata/team/adm/${user_.team}`)
+  let adm = await resp.json()
+  if (adm.length == 0) {
+    await create_user(user_)
+  }else{ 
+    alert('The team already has an administrator')
+  }
+}
+
 clear(form)
 }
 
