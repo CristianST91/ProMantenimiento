@@ -1,24 +1,31 @@
 package com.grupo_24.grupo8;
 
-import com.grupo_24.grupo8.vista.User_data_view;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//import com.grupo_24.grupo8.vista.User_data_view;
 
-/**
- * Hello world!
- *
- */
+@SpringBootApplication
 public class App 
 {
     public static void main( String[] args )
     {
-   
-        User_data_view view = new User_data_view();
+        SpringApplication.run(App.class, args);
+    }
+}
+
+
+
+/*    User_data_view view = new User_data_view();
        // view.create_user_data();
        // view.get_user_data_byId();
         //view.get_users_data_byLastname();
-        view.menu();
-    }
-       /*  //Crear objeto fabricante de sesiones
+        view.menu(); */
+
+
+
+
+/*  //Crear objeto fabricante de sesiones
         SessionFactory factory = new Configuration()
         .configure("cfg.xml")
         .addAnnotatedClass(User_data.class)
@@ -73,6 +80,3 @@ public class App
         session.close(); */
         
 
-
-    
-}

@@ -14,7 +14,7 @@
         @import url('http://fonts.cdnfonts.com/css/carter-one');
     </style>
     <!--Cargar hojas de estilos-->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/Index.css" />
     <!--Caragar bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
@@ -34,119 +34,125 @@
 <body class="margin-body">
     <!--Encabezado de la página-->
     <main>
-    <!--logo y titulo-->
-    <section id="section-logo2">
-        <img src="Logo.PNG" alt="30px" width="30px" height="30px" />
-        <div>
-            <h5 class="centro">
-                &emsp;Maintenance +
-            </h5>
-        </div>
-        <!--Boton de LogOut-->
-        <div class="lado">
-            <a href="LogIn.html">
-                <button type="button" class="btn btn-dark">LogOut</button>
-            </a>
-        </div>
-    </section>
-    <!--Formulario-->
-    <!--Area de: date, Work Order Number y Estimated Time-->
-    <section id="section-menu2">
-        <!--<form-control-date> Date-->
-        <div class="centro">
-            <label for="date-pick">Date&ensp;</label>
-            <div class="d-flex p-2 bd-highlight">
-                <input placeholder="Select date" type="date" id="date-pick" class="label-time">
+        <!--logo y titulo-->
+        <section id="section-logo2">
+            <img src="Logo.PNG" alt="30px" width="30px" height="30px" />
+            <div>
+                <h5 class="centro">
+                    &emsp;Maintenance +
+                </h5>
+                <p id="admin"></p>
             </div>
-        </div>
-        <div class="margin-date"></div>
-         <!--<form-control-text> Work Order Number-->
-        <div class="centro">
-            <label for="WON">Work Order Number&ensp;&ensp;</label>
-            <input class="form-control input-lm" type="text" id="WON" placeholder="N°">
-        </div>
-        <div class="margin-date"></div>
-        <!--<form-control-number> Estimated Time-->
-        <div class="centro">
-            <label for="Estimated-time">Estimated Time&ensp;&ensp;</label>
-            <input type="number" id="Estimated-time" class="form-control" placeholder="Hours" />
-        </div>
-        <br><br>
-    </section>
-    <!--Area de: Responsible, Activity y Suggestions-->
-    <form id="section-menu3">
-        <!--<form-select> Responsible-->
-        <div class="centro">
-            <label for="menu-list">Responsible&ensp;</label>
-            <select class="form-select" id="menu-list" required>
-                <option selected disabled value="">Developer Name&ensp;</option>
-                <option>...</option>
-            </select>
-            <div class="invalid-feedback">
-                Please select a valid state.
+            <!--Boton de LogOut-->
+            <div class="lado">
+                <a href="LogIn.html">
+                    <button type="button" onclick="deleteStorage();" class="btn btn-dark" id="logout">LogOut</button>
+                </a>
             </div>
-        </div>
-        <br>
-        <!--<form-control-text> Activity-->
-        <div class="centro">
-            <label for="activ">Activity&ensp;</label>
-            <input class="form-control input-lm" type="text" id="activ" placeholder="Activity Name">
-        </div>
-        <br><br>
-        <!--<text-area> Suggestions:-->
-        <div class="form-group">
-            <label for="Suggestions-box">Suggestions:</label>
-            <textarea class="form-control" id="Suggestions-box" rows="3" placeholder="Tips for the activity developer"></textarea>
-        </div>
-    </form>
-    <!--Area de: Real Time, Activity Finished!-->
-    <section id="section-menu4">
-        <!--<form-control-number> Real Time-->
-        <div element class="centro">
-            <label for="Real-time">Real Time&ensp;</label>
-            <input type="number" id="Real-time" class="form-control" placeholder="Hours" />
-        </div>
-        <!--<form-check-label> Activity Finished!-->
-        <div class="centro">
-            <input class="form-check-input" type="checkbox" value="" id="Check2"
-                title="Create a team and its account manager">
-            <label class="form-check-label" for="Check2">&ensp;&ensp;Activity Finished!</label>
-        </div>
-    </section>
-    <!--Area de: Notes-->
-    <section id="section-menu3">
-        <br>
-        <!--<text-area> Notes:-->
-        <div class="form-group">
-            <label for="Notes-box">Notes:</label>
-            <textarea class="form-control" id="Notes-box" rows="3" placeholder="Notes, drawbacks"></textarea>
-        </div>
-    </section>
-    </main>
-    <footer>
-        <!--Area de: Back, Save, Next-->
-    <section id="section-menu5">
-        <!--Boton de Back-->
-        <div class="centro">
-            <a href="Agenda.html">
-                <button type="button" class="btn btn-dark">Back</button>
-            </a>
-        </div>
-        <!--Boton de Save-->
-        <div class="centro">
-            <a href="Agenda.html">
-                <button type="button" class="btn btn-dark">Save</button>
-            </a>
-        </div>
-        <!--Boton de Next-->
-        <div class="centro">
-            <a href="Agenda.html">
-                <button type="button" class="btn btn-dark">Next</button>
-            </a>
-        </div>
-    </section>
-    <div class="margin-end"></div>
+        </section>
+        <!--Formulario-->
+        <!--Area de: date, Work Order Number y Estimated Time-->
+        <form class="mb-3" onsubmit="data_work_order(event)" id="form3">
+            <section id="section-menu2">
+                <!--<form-control-date> Date-->
+                <div class="centro" id="ss">
+                    <label for="date-pick">Date&ensp;</label>
+                    <div class="d-flex p-2 bd-highlight">
+                        <input name="date" placeholder="Select date" type="date" id="date-pick" class="label-time" value="2018-07-22">
+                    </div>
+                </div>
+                <div class="margin-date"></div>
+                <!--<form-control-text> Work Order Number-->
+                <div class="centro">
+                    <label for="menu-list">Work Order Number&ensp;</label>
+                        <select name="orders" class="form-select" id="WON" onchange="changeOrder();" required>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                </div>
+                <div class="margin-date"></div>
+                <!--<form-control-number> Estimated Time-->
+                <div class="centro">
+                    <label for="Estimated-time">Estimated Time&ensp;&ensp;</label>
+                    <input name="estimated_time" type="number" id="Estimated-time" class="form-control" placeholder="Hours" />
+                </div>
+                <br><br>
+            </section>
+            <section id="section-menu3">
+            <!--Area de: Responsible, Activity y Suggestions-->
+            <!--<form-select> Responsible-->
+            <div class="centro">
+                <label for="menu-list">Responsible&ensp;</label>
+                <select name="responsible" class="form-select" id="menu-list" required>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+            <br>
+            <!--<form-control-text> Activity-->
+            <div class="centro">
+                <label for="activ">Activity&ensp;</label>
+                <input name="activity" class="form-control input-lm" type="text" id="activ" placeholder="Activity Name" value="">
+            </div>
+            <br><br>
+            <!--<text-area> Suggestions:-->
+            <div class="form-group">
+                <label for="Suggestions-box">Suggestions:</label>
+                <textarea name="suggestions" class="form-control" id="Suggestions-box" rows="3"
+                    placeholder="Tips for the activity developer"></textarea>
+            </div>
+            <!--Area de: Real Time, Activity Finished!-->
+            <section id="section-menu4">
+                <!--<form-control-number> Real Time-->
+                <div element class="centro">
+                    <label for="Real-time">Real Time&ensp;</label>
+                    <input name="real_time" type="number" id="Real-time" class="form-control" placeholder="Hours"/>
+                </div>
+                <!--<form-check-label> Activity Finished!-->
+                <div class="centro">
+                    <input onchange="changeBtnSubmit();" name="activity_finished" class="form-check-input" type="checkbox"  id="Check2"
+                        title="Create a team and its account manager">
+                    <label class="form-check-label" for="Check2">&ensp;&ensp;Activity Finished!</label>
+                </div>
+            </section>
+            <!--Area de: Notes-->
+            <section id="section-menu3">
+                <br>
+                <!--<text-area> Notes:-->
+                <div class="form-group">
+                    <label for="Notes-box">Notes:</label>
+                    <textarea name="notes" class="form-control" id="Notes-box" rows="3" placeholder="Notes, drawbacks"></textarea>
+                </div>
+            </section>
+
+            <footer>
+                <!--Area de: Back, Save, Next-->
+                <section id="section-menu5">
+                    <!--Boton de Back-->
+                    <div class="centro">
+                            <button type="button" onclick="pageBack()" class="btn btn-dark" id="btn-back">Back</button>
+                    
+                    </div>
+                    <!--Boton de Save-->
+                    <div class="centro">
+                            <button type="submit" class="btn btn-dark" id="btn-submit">Save</button>
+                    </div>
+                    <!--Boton de Next-->
+                    <div class="centro">
+                            <button type="button" onclick="pageNext()" class="btn btn-dark" id="btn-next">Next</button>
+        
+                    </div>
+                </section>
+        </form>
+        <div class="margin-end"></div>
     </footer>
+    </main>
+    <!--Cargar scripts-->
+    <script src="scripts/LogIn.js"></script>
+    <script src="scripts/Agenda.js"></script>
+
 </body>
 
 </html>
